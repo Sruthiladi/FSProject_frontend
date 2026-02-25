@@ -165,3 +165,10 @@
     padding: 20px;
   }
 }
+.sidebar-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  font-size: 18px;
+}
