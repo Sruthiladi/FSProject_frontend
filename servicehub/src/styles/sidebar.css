@@ -1,0 +1,167 @@
+/* ===== SIDEBAR LAYOUT ===== */
+.sidebar-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background: var(--secondary);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+}
+
+.sidebar-brand {
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--gray-700);
+}
+
+.sidebar-brand h2 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.sidebar-brand span {
+  font-size: 0.75rem;
+  color: var(--gray-400);
+  display: block;
+  margin-top: 2px;
+}
+
+.sidebar-nav {
+  flex: 1;
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--gray-400);
+  border-radius: var(--radius);
+  transition: var(--transition);
+}
+
+.sidebar-link:hover {
+  background: var(--gray-800);
+  color: var(--white);
+}
+
+.sidebar-link.active {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.sidebar-link.logout {
+  margin-top: auto;
+  color: var(--gray-400);
+}
+
+.sidebar-link.logout:hover {
+  background: rgba(220, 38, 38, 0.15);
+  color: var(--danger);
+}
+
+.sidebar-link svg,
+.sidebar-link .sidebar-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+/* ===== MAIN CONTENT ===== */
+.sidebar-main {
+  flex: 1;
+  margin-left: 250px;
+  padding: 32px;
+  background: var(--gray-50);
+  min-height: 100vh;
+}
+
+/* ===== STAT GRID ===== */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+/* ===== CHART PLACEHOLDER ===== */
+.chart-container {
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.chart-container h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--gray-900);
+}
+
+.chart-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  height: 200px;
+  padding-top: 8px;
+}
+
+.chart-bar-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  height: 100%;
+  justify-content: flex-end;
+}
+
+.chart-bar {
+  width: 100%;
+  max-width: 48px;
+  background: var(--primary);
+  border-radius: 6px 6px 0 0;
+  transition: var(--transition);
+  position: relative;
+}
+
+.chart-bar:hover {
+  background: var(--primary-dark);
+}
+
+.chart-bar-label {
+  font-size: 0.75rem;
+  color: var(--gray-500);
+  font-weight: 500;
+}
+
+.chart-bar-value {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: var(--gray-700);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+  }
+  .sidebar-main {
+    margin-left: 200px;
+    padding: 20px;
+  }
+}
