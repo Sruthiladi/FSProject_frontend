@@ -1,10 +1,10 @@
 import { useState } from 'react'
 
 const initialServices = [
-  { id: 1, name: 'Wiring', price: 600, duration: '2-3 hours', status: 'Active' },
-  { id: 2, name: 'Panel Upgrade', price: 1200, duration: '4-5 hours', status: 'Active' },
-  { id: 3, name: 'Lighting Installation', price: 450, duration: '1-2 hours', status: 'Active' },
-  { id: 4, name: 'Smart Home Setup', price: 2500, duration: '5-6 hours', status: 'Inactive' },
+  { id: 1, name: 'IT Support', price: 500, duration: '1-2 hours', status: 'Active' },
+  { id: 2, name: 'Website Development', price: 800, duration: '3-5 days', status: 'Active' },
+  { id: 3, name: 'System Setup', price: 700, duration: '2-3 hours', status: 'Active' },
+  { id: 4, name: 'Technical Consulting', price: 1200, duration: '1 hour', status: 'Inactive' },
 ]
 
 export default function Services() {
@@ -50,12 +50,11 @@ export default function Services() {
 
       {showForm && (
         <div className="card" style={{ padding: '20px', marginBottom: '20px' }}>
-          <form onSubmit={handleAdd} style={{ display: 'flex', gap: '12px', alignItems: 'flex-end', flexWrap: 'wrap' }}>
+          <form onSubmit={handleAdd} style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
             <div className="form-group" style={{ flex: 1, minWidth: '180px' }}>
               <label className="form-label">Service Name</label>
               <input
                 className="form-input"
-                placeholder="e.g. Drain Cleaning"
                 value={newService.name}
                 onChange={(e) => setNewService({ ...newService, name: e.target.value })}
                 required
@@ -66,7 +65,6 @@ export default function Services() {
               <input
                 className="form-input"
                 type="number"
-                placeholder="500"
                 value={newService.price}
                 onChange={(e) => setNewService({ ...newService, price: e.target.value })}
                 required
@@ -76,7 +74,6 @@ export default function Services() {
               <label className="form-label">Duration</label>
               <input
                 className="form-input"
-                placeholder="e.g. 1-2 hours"
                 value={newService.duration}
                 onChange={(e) => setNewService({ ...newService, duration: e.target.value })}
                 required
@@ -103,7 +100,7 @@ export default function Services() {
               {services.map((s) => (
                 <tr key={s.id}>
                   <td style={{ fontWeight: 500 }}>{s.name}</td>
-                  <td>{'₹'}{s.price}</td>
+                  <td>₹{s.price}</td>
                   <td>{s.duration}</td>
                   <td>
                     <span className={`badge ${s.status === 'Active' ? 'badge-success' : 'badge-warning'}`}>

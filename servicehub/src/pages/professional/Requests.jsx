@@ -1,10 +1,38 @@
 import { useState } from 'react'
 
 const initialRequests = [
-  { id: 'RQ001', customer: 'Amit Gupta', service: 'Wiring', date: '2026-03-02', time: '10:00 AM', status: 'Pending' },
-  { id: 'RQ002', customer: 'Sneha Roy', service: 'Panel Upgrade', date: '2026-03-04', time: '2:00 PM', status: 'Pending' },
-  { id: 'RQ003', customer: 'Kavita Joshi', service: 'Lighting Installation', date: '2026-02-28', time: '11:00 AM', status: 'Accepted' },
-  { id: 'RQ004', customer: 'Rohan Das', service: 'Smart Home Setup', date: '2026-02-25', time: '9:00 AM', status: 'Completed' },
+  {
+    id: 'RQ001',
+    customer: 'Amit Gupta',
+    service: 'Website Development',
+    date: '2026-03-02',
+    time: '10:00 AM',
+    status: 'Pending',
+  },
+  {
+    id: 'RQ002',
+    customer: 'Sneha Roy',
+    service: 'IT Support',
+    date: '2026-03-04',
+    time: '2:00 PM',
+    status: 'Pending',
+  },
+  {
+    id: 'RQ003',
+    customer: 'Kavita Joshi',
+    service: 'System Setup',
+    date: '2026-02-28',
+    time: '11:00 AM',
+    status: 'Accepted',
+  },
+  {
+    id: 'RQ004',
+    customer: 'Rohan Das',
+    service: 'Technical Consulting',
+    date: '2026-02-25',
+    time: '9:00 AM',
+    status: 'Completed',
+  },
 ]
 
 export default function Requests() {
