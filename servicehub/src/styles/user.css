@@ -360,33 +360,82 @@
 }
 
 /* ===== RESPONSIVE ===== */
+/* ===== UPDATED RESPONSIVE USER LAYOUT ===== */
+/* 1. Ensure icons are hidden on desktop */
+.nav-icon {
+  display: none;
+  font-size: 1.25rem;
+}
+
+/* 2. Responsive Rules */
 @media (max-width: 768px) {
-  .user-navbar {
-    padding: 0 16px;
-  }
+  /* This turns the top bar into a bottom bar */
   .user-navbar .nav-links {
-    gap: 2px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px; /* Specific height for the bar */
+    background: var(--white);
+    border-top: 1px solid var(--gray-200);
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-around; /* Spreads icons evenly */
+    align-items: center;
+    z-index: 1000;
   }
+
+  /* Make links look like app buttons */
   .user-navbar .nav-link {
-    padding: 6px 10px;
-    font-size: 0.8125rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 8px;
+    font-size: 0.65rem;
+    color: var(--gray-500);
+    min-width: 60px;
   }
+
+  .nav-icon {
+    display: block; /* Show icons now */
+    font-size: 1.4rem;
+    margin-bottom: 2px;
+  }
+
+  /* Prevents content from being hidden behind the bottom bar */
   .user-content {
-    padding: 20px 16px;
+    padding: 20px 16px 100px 16px; 
   }
+
+  /* Fix Hero and Search */
   .hero {
-    padding: 32px 24px;
+    padding: 32px 20px;
+    text-align: center;
+    border-radius: var(--radius);
   }
-  .hero h1 {
-    font-size: 1.5rem;
+
+  .hero-search {
+    flex-direction: column; /* Stacks input and button */
+    max-width: 100%;
   }
+
+  .hero-search input {
+    width: 100%;
+  }
+
+  /* Grid Fixes */
   .pro-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Single column on phones */
   }
+
   .book-layout {
     grid-template-columns: 1fr;
   }
-  .book-form .form-grid {
-    grid-template-columns: 1fr;
+
+  .book-summary {
+    position: static;
+    margin-top: 24px;
   }
 }

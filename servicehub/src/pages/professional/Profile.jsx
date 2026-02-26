@@ -86,7 +86,7 @@ export default function Profile() {
           }}
         >
           <img
-            src="https://media.istockphoto.com/id/589544922/photo/doing-business-with-his-brain.jpg"
+            src="https://media.istockphoto.com/id/589544922/photo/doing-business-with-his-brain.jpg?s=612x612&w=0&k=20&c=5WdQs54XbpQI6kd0uFFe5aLJ44QH3DpDEmBda20u60A="
             alt="Profile"
             style={{
               width: '80px',
