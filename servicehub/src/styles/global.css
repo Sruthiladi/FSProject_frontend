@@ -317,3 +317,27 @@ input, select, textarea {
   background: var(--gray-300);
   border-radius: 3px;
 }
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .page-header h1 {
+    font-size: 1.25rem;
+  }
+
+  .btn {
+    padding: 10px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn-lg {
+    padding: 12px 20px;
+    font-size: 0.9375rem;
+  }
+
+  .stat-card .stat-value {
+    font-size: 1.5rem;
+  }
+}
